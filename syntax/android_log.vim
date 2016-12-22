@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language:     android-log
+" Language:     android_log
 " Maintainer:   Yan QiDong <yanqd0@outlook.com>
 
 
@@ -7,7 +7,7 @@
 if exists("b:current_syntax")
     finish
 else
-    let b:current_syntax = "android-log"
+    let b:current_syntax = "android_log"
 endif
 " }}}
 

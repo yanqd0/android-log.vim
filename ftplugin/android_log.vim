@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language:     android-log
+" Language:     android_log
 " Maintainer:   Yan QiDong <yanqd0@outlook.com>
 
 
