@@ -11,7 +11,7 @@ else
 endif
 " }}}
 
-set nospell
+setlocal nospell
 
 
 " vim: set shiftwidth=4 softtabstop=-1 expandtab:
