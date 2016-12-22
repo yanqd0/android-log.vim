@@ -12,9 +12,22 @@ endif
 " }}}
 
 " Syntax {{{
-syntax keyword AndroidLogError FATAL EXCEPTION
 
-syntax keyword AndroidLogKeyword
+" AndroidLogError {{{
+syntax keyword AndroidLogError FATAL EXCEPTION
+syntax match AndroidLogError "\v<System\.err>"
+
+highlight link AndroidLogError Error
+" }}}
+
+" AndroidLogNumber {{{
+syntax match AndroidLogNumber "\v^\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d*"
+
+highlight link AndroidLogNumber Special
+" }}}
+
+" AndroidLogTag {{{
+syntax keyword AndroidLogTag
             \ Activity
             \ ActivityThread
             \ ActivityManager
@@ -22,11 +35,11 @@ syntax keyword AndroidLogKeyword
             \ View
             \ AndroidRuntime
 
-syntax match AndroidLogKeyword "\vSystem\.out:"
-syntax match AndroidLogKeyword "\v\d\d:\d\d:\d\d\.\d\d\d*"
+syntax match AndroidLogTag "\v<System\.out>"
 
-highlight link AndroidLogError Error
-highlight link AndroidLogKeyword Keyword
+highlight link AndroidLogTag Tag
+" }}}
+
 " }}}
 
 
