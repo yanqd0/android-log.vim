@@ -26,6 +26,16 @@ syntax match AndroidLogNumber "\v^\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d*"
 highlight link AndroidLogNumber Special
 " }}}
 
+" AndroidLogLabel {{{
+syntax match AndroidLogLabel "\v <V> "
+syntax match AndroidLogLabel "\v <D> "
+syntax match AndroidLogLabel "\v <I> "
+syntax match AndroidLogLabel "\v <W> "
+syntax match AndroidLogLabel "\v <E> "
+
+highlight link AndroidLogLabel Label
+" }}}
+
 " AndroidLogTag {{{
 syntax keyword AndroidLogTag
             \ Activity
