@@ -20,9 +20,10 @@ syntax keyword AndroidLogKeyword
             \ ActivityManager
             \ AlarmManager
             \ View
+            \ AndroidRuntime
 
 syntax match AndroidLogKeyword "\vSystem\.out:"
-syntax match AndroidLogKeyword "\v\d\d:\d\d:\d\d\.\d\d\d"
+syntax match AndroidLogKeyword "\v\d\d:\d\d:\d\d\.\d\d\d*"
 
 highlight link AndroidLogError Error
 highlight link AndroidLogKeyword Keyword
