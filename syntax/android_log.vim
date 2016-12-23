@@ -22,9 +22,9 @@ syntax match AndroidLogException    "\v<java\.lang.*Error>"
 syntax match AndroidLogException    "\v<java\.lang.*Exception>"
 syntax match AndroidLogException    "\v\tat "
 
-highlight link AndroidLogError Exception
+highlight link AndroidLogException Exception
 
-syntax cluster AndroidLogTop add=AndroidLogError
+syntax cluster AndroidLogTop add=AndroidLogException
 " }}}
 
 " Special values {{{
