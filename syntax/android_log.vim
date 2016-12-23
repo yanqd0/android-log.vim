@@ -44,6 +44,15 @@ highlight default link AndroidLogCharacter          Character
 highlight default link AndroidLogSpecialChar        SpecialChar
 highlight default link AndroidLogString             String
 highlight default link AndroidLogNumber             Number
+
+syntax cluster AndroidLogTop add=
+            \ AndroidLogBoolean,
+            \ AndroidLogConstant,
+            \ AndroidLogSpecialChar,
+            \ AndroidLogCharacter,
+            \ AndroidLogSpecialChar,
+            \ AndroidLogString,
+            \ AndroidLogNumber,
 " }}}
 
 " AndroidLogDate {{{
@@ -57,13 +66,16 @@ syntax match AndroidLogV    "\v <V> "
 syntax match AndroidLogD    "\v <D> "
 syntax match AndroidLogI    "\v <I> "
 syntax match AndroidLogW    "\v <W> "
-syntax match AndroidLogE    "\v <E> .*$"
+syntax match AndroidLogW    "\v <E> "
+syntax region AndroidLogE start="\v <E> .*:" end="\n" contains=@AndroidLogTop
 
 highlight link AndroidLogV  DiffChange
 highlight link AndroidLogD  DiffText
 highlight link AndroidLogI  DiffAdd
 highlight link AndroidLogW  DiffDelete
-highlight link AndroidLogE  DiffDelete
+highlight link AndroidLogE  Error
+
+syntax cluster AndroidLogTop add=AndroidLogW
 " }}}
 
 " AndroidLogTag {{{
@@ -78,6 +90,8 @@ syntax keyword AndroidLogTag
 syntax match AndroidLogTag "\v<System\.out>"
 
 highlight link AndroidLogTag Tag
+
+syntax cluster AndroidLogTop add=AndroidLogTag
 " }}}
 
 " }}}
