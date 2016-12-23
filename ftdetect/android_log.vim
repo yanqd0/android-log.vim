@@ -6,6 +6,7 @@
 if has("autocmd")
     augroup android_log_files
         autocmd!
+        autocmd BufNewFile,BufRead *.alog           setfiletype android_log
         autocmd BufNewFile,BufRead main_log         setfiletype android_log
         autocmd BufNewFile,BufRead main_log.\d*     setfiletype android_log
         autocmd BufNewFile,BufRead sys_log          setfiletype android_log
