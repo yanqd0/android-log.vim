@@ -52,14 +52,18 @@ syntax match AndroidLogDate "\v^\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d*"
 highlight link AndroidLogDate Special
 " }}}
 
-" AndroidLogLabel {{{
-syntax match AndroidLogLabel "\v <V> "
-syntax match AndroidLogLabel "\v <D> "
-syntax match AndroidLogLabel "\v <I> "
-syntax match AndroidLogLabel "\v <W> "
-syntax match AndroidLogLabel "\v <E> "
+" Android log levels {{{
+syntax match AndroidLogV    "\v <V> "
+syntax match AndroidLogD    "\v <D> "
+syntax match AndroidLogI    "\v <I> "
+syntax match AndroidLogW    "\v <W> "
+syntax match AndroidLogE    "\v <E> .*$"
 
-highlight link AndroidLogLabel Label
+highlight link AndroidLogV  DiffChange
+highlight link AndroidLogD  DiffText
+highlight link AndroidLogI  DiffAdd
+highlight link AndroidLogW  DiffDelete
+highlight link AndroidLogE  DiffDelete
 " }}}
 
 " AndroidLogTag {{{
