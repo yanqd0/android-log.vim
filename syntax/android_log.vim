@@ -13,11 +13,18 @@ endif
 
 " Syntax {{{
 
-" AndroidLogError {{{
-syntax keyword AndroidLogError FATAL EXCEPTION
-syntax match AndroidLogError "\v<System\.err>"
+" Known exceptions {{{
+syntax keyword AndroidLogException  FATAL EXCEPTION
+syntax match AndroidLogException    "\v<System\.err>"
+syntax match AndroidLogException    "\v\s*Process:.*,\s*PID:"
+syntax match AndroidLogException    "\v<java\.lang\.Throwable>"
+syntax match AndroidLogException    "\v<java\.lang.*Error>"
+syntax match AndroidLogException    "\v<java\.lang.*Exception>"
+syntax match AndroidLogException    "\v\tat "
 
-highlight link AndroidLogError Error
+highlight link AndroidLogError Exception
+
+syntax cluster AndroidLogTop add=AndroidLogError
 " }}}
 
 " Special values {{{
