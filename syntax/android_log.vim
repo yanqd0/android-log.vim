@@ -43,13 +43,13 @@ highlight default link AndroidLogSpecialChar        SpecialChar
 highlight default link AndroidLogCharacter          Character
 highlight default link AndroidLogSpecialChar        SpecialChar
 highlight default link AndroidLogString             String
-highlight default link javaNumber                   Number
+highlight default link AndroidLogNumber             Number
 " }}}
 
-" AndroidLogNumber {{{
-syntax match AndroidLogNumber "\v^\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d*"
+" AndroidLogDate {{{
+syntax match AndroidLogDate "\v^\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d*"
 
-highlight link AndroidLogNumber Special
+highlight link AndroidLogDate Special
 " }}}
 
 " AndroidLogLabel {{{
